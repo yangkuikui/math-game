@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Math Game</title>
     <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div class="main-ui">
       <div class="problem"></div>
       <form action="" class="form">
@@ -12,9 +14,29 @@
         <button>Submit</button>
       </form>
       <p class="status">You need <span class="points-needed">10</span> more points, and are allowed to make <span class="mistakes-allowed">2</span> more mistakes.</p>
+
+      <div class="progress">
+        <div class="boxes">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="progress-inner"></div>
+      </div>
     </div>
-  </head>
-  <body>
+    <div class="overlay">
+      <div class="overlay-inner">
+        <p class="end-message">Congrats!</p>
+        <button class="reset-btn">Start Over</button>
+      </div>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>

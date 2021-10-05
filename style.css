@@ -1,0 +1,118 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.box {
+  height: 40px;
+  border-right: 0.5px solid #333;
+  flex: 1;
+}
+
+.boxes {
+  display: flex;
+  width: 100%;
+}
+
+.progress {
+  border: 0.5px solid #333;
+  border-right: none;
+  position: relative;
+}
+
+.progress-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: green;
+  opacity: 0.3;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: all 0.3s ease-out;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.829);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.overlay-inner {
+  margin: auto;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+body.overlay-is-open .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.overlay-is-open .main-ui {
+  filter: blur(4px);
+}
+
+@keyframes showError {
+  30% {
+    color: red;
+    transform: scale(1.2);
+  }
+
+  100% {
+    color: #333;
+    transform: scale(1);
+  }
+}
+.animation-wrong {
+  animation: 0.45s showError;
+}
+
+.problem {
+  font-size: 8rem;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.main-ui {
+  text-align: center;
+}
+.status {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 60px;
+}
+
+button {
+  padding: 5px 8px;
+  background-color: #004094;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 1px #333;
+}
+
+button:hover {
+  background-color: #c1d1f0;
+}
+
+button:focus {
+  background-color: #00275a;
+}
+
+.field {
+  padding: 5px;
+}
+
+.end-message {
+  font-size: 1.5rem;
+}
